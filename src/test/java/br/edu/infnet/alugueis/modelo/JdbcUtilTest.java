@@ -1,9 +1,8 @@
-package br.edu.infnet.alugueis.modelo.persistencia;
+package br.edu.infnet.alugueis.modelo;
 
+import br.edu.infnet.alugueis.modelo.JdbcUtil;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.sql.SQLException;
 
 import static org.junit.Assert.fail;
 

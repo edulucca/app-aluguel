@@ -10,6 +10,6 @@ public class Aluguel {
 
     private Cliente cliente;
 
-    private List<Produto> produtos;
+    private List<Equipamento> equipamentos;
 
 }

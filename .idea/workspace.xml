@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6edfb507-d336-4a7f-b146-4593c1bc5160" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Aluguel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/persistencia/JdbcUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/edu/infnet/alugueis/modelo/persistencia/JdbcUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/persistencia/ClienteDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/persistencia/enuns/UpdateClienteDAOEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/edu/infnet/alugueis/modelo/persistencia/ClienteDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-aluguel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Aluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Aluguel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/entidades/Equipamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/persistencia/JdbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/infnet/alugueis/modelo/JdbcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/edu/infnet/alugueis/modelo/persistencia/JdbcUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/edu/infnet/alugueis/modelo/JdbcUtilTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -60,11 +59,12 @@
       <recent name="br.edu.infnet.alugueis.modelo.entidades" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.edu.infnet.alugueis.modelo" />
       <recent name="br.edu.infnet.alugueis.modelo.persistencia" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="JdbcUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ClienteDAOTest.testDeleteCliente">
+    <configuration name="ClienteDAOTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aluguel" />
       <extension name="coverage">
         <pattern>
@@ -73,7 +73,71 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.edu.infnet.alugueis.modelo.persistencia" />
-      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.alugueis.modelo.persistencia.JdbcUtilTest" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.alugueis.modelo.persistencia.ClienteDAOTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteDAOTest.testDeleteCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aluguel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.alugueis.modelo.persistencia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet.alugueis.modelo.persistencia" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.alugueis.modelo.persistencia.ClienteDAOTest" />
+      <option name="METHOD_NAME" value="testDeleteCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteDAOTest.testListaClientes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aluguel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.alugueis.modelo.persistencia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet.alugueis.modelo.persistencia" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.alugueis.modelo.persistencia.ClienteDAOTest" />
+      <option name="METHOD_NAME" value="testListaClientes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteDAOTest.testUpdateCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aluguel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.alugueis.modelo.persistencia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet.alugueis.modelo.persistencia" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.alugueis.modelo.persistencia.ClienteDAOTest" />
+      <option name="METHOD_NAME" value="testUpdateCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aluguel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.infnet.alugueis.modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.edu.infnet.alugueis.modelo" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.infnet.alugueis.modelo.JdbcUtilTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,6 +145,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClienteDAOTest.testDeleteCliente" />
+        <item itemvalue="JUnit.ClienteDAOTest.testUpdateCliente" />
+        <item itemvalue="JUnit.ClienteDAOTest.testListaClientes" />
+        <item itemvalue="JUnit.ClienteDAOTest.test" />
         <item itemvalue="JUnit.JdbcUtilTest" />
       </list>
     </recent_temporary>

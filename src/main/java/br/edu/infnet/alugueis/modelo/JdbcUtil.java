@@ -1,4 +1,4 @@
-package br.edu.infnet.alugueis.modelo.persistencia;
+package br.edu.infnet.alugueis.modelo;
 
 import java.sql.Connection;
 import java.sql.Driver;

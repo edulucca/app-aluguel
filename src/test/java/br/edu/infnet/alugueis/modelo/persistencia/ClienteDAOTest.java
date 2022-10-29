@@ -23,12 +23,19 @@ public class ClienteDAOTest {
     }
 
     @Test
+    public void testObterCliente(){
+        ClienteDAO clienteDAO = new ClienteDAO();
+        Cliente cliente = new Cliente(1L, "Eduardo de Lucca", "666.666.666-66", "61998607406", true);
+        Assert.assertEquals(clienteDAO.obter(cliente).getCodigo(), cliente.getCodigo());
+    }
+
+    @Test
     public void testUpdateCliente(){
         ClienteDAO clienteDAO = new ClienteDAO();
 
         Cliente cliente = new Cliente(3L, "Fernando de Oliveira", "666.666.666-66", "61998607406", true);
 
-        Assert.assertTrue(clienteDAO.updateCliente(cliente, UpdateClienteDAOEnum.NOME));
+        Assert.assertTrue(clienteDAO.atualizar(cliente, UpdateClienteDAOEnum.NOME));
     }
 
     @Test
@@ -37,6 +44,6 @@ public class ClienteDAOTest {
 
         Cliente cliente = new Cliente(3L, "Fernando de Oliveira", "666.666.666-66", "61998607406", true);
 
-        Assert.assertTrue(clienteDAO.deleteCliente(cliente));
+        Assert.assertTrue(clienteDAO.deletar(cliente));
     }
 }

@@ -4,27 +4,16 @@ import br.edu.infnet.alugueis.modelo.JdbcUtil;
 import br.edu.infnet.alugueis.modelo.entidades.Cliente;
 import br.edu.infnet.alugueis.modelo.persistencia.enuns.UpdateClienteDAOEnum;
 
+import java.lang.ref.Cleaner;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
-public class ClienteDAO {
+public class ClienteDAO extends JdbcDAO<Cliente>{
 
-    private Connection conn;
-    private PreparedStatement preparedStatement;
-
-    private Statement statement;
-
-    private ResultSet resultSet;
-
-    private String sql;
 
     public ClienteDAO() {
-        try {
-            this.conn = JdbcUtil.obterConexao();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     public Boolean salvar(Cliente cliente) {
@@ -63,7 +52,7 @@ public class ClienteDAO {
         return clientes;
     }
 
-    public Boolean updateCliente(Cliente cliente, UpdateClienteDAOEnum updateClienteDAOEnum) {
+    public Boolean atualizar(Cliente cliente, UpdateClienteDAOEnum updateClienteDAOEnum) {
         try {
             switch (updateClienteDAOEnum) {
                 case CPF -> {
@@ -94,7 +83,7 @@ public class ClienteDAO {
     }
 
 
-    public Boolean deleteCliente(Cliente cliente) {
+    public Boolean deletar(Cliente cliente) {
         try {
             preparedStatement = conn.prepareStatement("DELETE FROM cliente WHERE cd_cliente = ?");
 
@@ -105,5 +94,25 @@ public class ClienteDAO {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public Cliente obter(Cliente cliente) {
+        try {
+            preparedStatement = conn.prepareStatement("SELECT * FROM cliente WHERE cd_cliente = ?");
+
+            preparedStatement.setLong(1, cliente.getCodigo());
+
+            resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next()){
+                return new Cliente(resultSet.getLong("cd_cliente"), resultSet.getString("nome"),
+                                            resultSet.getString("cpf"), resultSet.getString("telefone"),
+                                            resultSet.getBoolean("whatsapp"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
